@@ -1,0 +1,4 @@
+node_modules/
+faltas.db
+*.log
+.DS_Store

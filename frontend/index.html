@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Gestão de Faltas</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Sistema de Gestão de Faltas</h1>
+      <p>Registre suas faltas por matéria</p>
+    </header>
+
+    <section class="dashboard">
+      <div class="total-faltas">
+        <h2>Total de Faltas</h2>
+        <span class="count-number" id="totalCount">0</span>
+      </div>
+    </section>
+
+    <section class="materias-section">
+      <h2>Matérias</h2>
+      <div class="materia-form">
+        <input type="text" id="materiaInput" placeholder="Nome da matéria" />
+        <button id="addMateriaBtn">Adicionar Matéria</button>
+      </div>
+      <div class="materia-list" id="materiaList">
+        <p>Carregando matérias...</p>
+      </div>
+    </section>
+
+    <section class="add-falta-section">
+      <h2>Registrar Falta</h2>
+      <form id="faltaForm">
+        <div class="form-group">
+          <label for="materiaSelect">Matéria</label>
+          <select id="materiaSelect" required></select>
+        </div>
+        <div class="form-group">
+          <label for="dataFalta">Data da Falta</label>
+          <input type="date" id="dataFalta" required />
+        </div>
+        <div class="form-group">
+          <label for="observacao">Observação</label>
+          <textarea id="observacao" placeholder="Observação opcional"></textarea>
+        </div>
+        <div class="form-actions">
+          <button type="submit" id="saveFaltaBtn">Salvar Falta</button>
+          <button type="button" id="cancelFaltaBtn">Cancelar</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="faltas-section">
+      <h2>Faltas Registradas</h2>
+      <div class="faltas-filter">
+        <select id="filterMateria">
+          <option value="all">Todas as matérias</option>
+        </select>
+      </div>
+      <div class="faltas-list" id="faltasList">
+        <p>Carregando faltas...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
